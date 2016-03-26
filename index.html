@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="assets/base/style.css" />
+    </head>
+    <body>
+        <script type="text/javascript" src="//gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+        <script type="text/javascript">
+            var slideTitle = window.location.search.substring(1);
+            var slideshow = remark.create({
+                sourceUrl: "assets/" + slideTitle + "/slide.md",
+                // ratio: '16:9',
+                highlightStyle: 'monokai',
+                highlightLanguage: 'remark',
+                highlightLines: true
+            });
+            var addCss = function (slideTitle) {
+                var link = document.createElement('link');
+                link.href = "assets/" + slideTitle + "/style.css"
+                link.type = 'text/css';
+                link.rel= 'stylesheet';
+
+                var head = document.getElementsByTagName('head');
+                head.item(0).appendChild(link);
+            };
+            var addJs = function (slideTitle) {
+                var script = document.createElement('script');
+                script.src = "assets/" + slideTitle + "/script.js"
+                script.type = 'text/javascript';
+
+                var body = document.getElementsByTagName('body');
+                body.item(0).appendChild(script);
+            };
+
+            addCss(slideTitle);
+            addJs(slideTitle);
+        </script>
+    </body>
+</html>
