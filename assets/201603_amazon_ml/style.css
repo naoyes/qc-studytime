@@ -1,0 +1,28 @@
+#slide-how .slides .first {
+  top: 10%;
+}
+
+/* Two-column layout */
+.left-column {
+  width: 30%;
+  font-size: 0.7em;
+}
+.right-column {
+  width: 70%;
+}
+
+.left-column-ml {
+  color: #777;
+  width: 25%;
+  height: 92%;
+  float: left;
+  font-size: 0.7em;
+}
+  .left-column-ml h2:last-of-type, .left-column-ml h3:last-child {
+    color: #000;
+  }
+.right-column-ml {
+  width: 70%;
+  float: right;
+  padding-top: 1em;
+}
